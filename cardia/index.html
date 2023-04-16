@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>cardia</title>
+    <link rel="shortcut icon" type="image/png" href="img/heart.png">
+    <link href="css/styles-merged.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="fonts/icomoon/style.css" rel="stylesheet">
+    <link href="css/predictor.css" rel="stylesheet">
+    <link href="css/back-to-top.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+   
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="js/back-to-top.js"></script>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default probootstrap-navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed"
+                    data-target="#navbar-collapse"
+                    data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" style="font-family: 'Roboto', sans-serif;">cardia</a>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a data-nav-section="home" href="#" style="font-family: 'Roboto', sans-serif;">Home</a></li>
+                <li><a data-nav-section="predict" href="#">Predict</a></li>
+                <li><a data-nav-section="analysis" href="#">Analysis</a></li>
+                <li><a data-nav-section="contact" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant"
+         data-section="home" data-stellar-background-ratio="0.5" id="home"
+         style="background-color: #5500ff74; background-size: 100% 50%;">
+    <div class="container">
+        <div class="row intro-text">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <img style = "position:relative;right:470px;top:100px"src = "img/cardia logo.png">
+                <img style = "position:relative;right:280px;top:200px;"src = "img/caption.png">
+                <img style = "position:relative;left:400px;bottom:100px;width:450px;height:450px;"src = "img/dash.png">
+                <div class="probootstrap-subheading center">
+                    <p style = "position:relative;right:405px; bottom:100px; font-family: 'Roboto', sans-serif;" class="probootstrap-animate"><a class="btn btn-primary" href="#predict" role="button" >Check</a><a class="btn btn-default smoothscroll" href="#analysis" role="button">See Analysis</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<button class="btn btn-primary" id="backToTopBtn" onclick="topFunction()" title="Go to top">
+    <span class="icon icon-align-top"></span>
+</button>
+
+<section class="probootstrap-section" style="background-color: #6c22ff80;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+                    <img src = "img/purpose.png" style="width:150px;display: block;margin-left: auto;
+                    margin-right: auto;">
+                    <br>
+                    <p style="font-family: 'Roboto', sans-serif; color:#ffff" >The purpose is to provide individuals with a reliable and convenient tool to assess their risk of developing heart disease. Heart disease is a leading cause of death worldwide, and early detection and management can significantly improve outcomes. By using our heart disease prediction tool, individuals can input relevant health information, such as sex, resting blood pressure, thalium test, and more to receive an estimation of their risk of developing heart disease. Ultimately, the goal of cardia is to empower individuals to take control of their cardiovascular health and make informed decisions about their lifestyle choices and medical care.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+                    <img src = "img/SAVINGS.png" style="width:150px;display: block;margin-left: auto;
+                    margin-right: auto;">
+                    <br>
+                    <p style="font-family: 'Roboto', sans-serif; color:#ffff" >Cardia can reduce costs by identifying individuals who are at high risk of developing heart disease and enabling early intervention and treatment. By identifying those who are at risk of heart disease, cardia can promote lifestyle modifications and preventative measures that can help reduce the likelihood of developing the condition. Early detection and management of heart disease can prevent the need for costly medical interventions, such as surgeries, hospitalizations, and emergency room visits. Moreover, a heart disease prediction tool can empower individuals to take control of their cardiovascular health, reducing the need for unnecessary medical appointments and interventions. By improving early detection and prevention of heart disease, cardia can ultimately reduce healthcare costs and improve overall population health.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
+                    <img src = "img/ACC.png" style="width:150px;display: block;margin-left: auto;
+                    margin-right: auto;">
+                    <br>
+                    <p style="font-family: 'Roboto', sans-serif; color:#ffff; text-shadow: 1px 1px #282828;" >Cardia is highly accurate and provides reliable predictions based on large samples of data. The accuracy of the tool is based on robust data analysis and predictive modeling, which considers a wide range of factors that can influence the risk of developing heart disease. Cardia has been developed and validated using clinical data, and the prediction rates have been shown to be highly accurate. By analyzing large samples of data, the tool can identify patterns and trends that are not always apparent in smaller datasets, resulting in more accurate predictions. Overall,cardia is a reliable and effective tool for assessing an individual's risk of developing heart disease, providing valuable insights for individuals and healthcare providers alike.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+
+<section class="probootstrap-section" data-section="predict" id="predict" style="background-color: #6c22ff80;">
+    <div class="container">
+        <div class="row text-center mb100">
+            <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+                <img src ="img/predict.png" style = "width:300px;">
+                <br>
+                <p style = "color:white;">Enter the appropriate values of symptoms you face. Get the chances of you contracting heart disease
+                    based on those values.</p>
+            </div>
+        </div>
+        <!-- END row -->
+        <!-- Main Div -->
+        <div id="parent">
+            <div id="wrapper">
+                
+                <div class="child1">
+                    <table class="naked_table">
+                        <tr>
+                            <td>
+                                <label class="before_slider" for="nSex1">
+                                    Sex (0=female,1=male)</label></td>
+                            <td class="input_slider">
+                                <form class="slider_input">
+                                    <input class="hd-slider-width" id="nSex1" max="1" min="0" name="amountRange"
+                                           oninput="this.form.amountInput.value=this.value"
+                                           step="1" type="range" value="0"/>
+                                    <input class="hd-number-width" id="nSex2" max="1" min="0" name="amountInput"
+                                           oninput="this.form.amountRange.value=this.value"
+                                           step="1" type="number" value="0"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="before_slider" for="nRestbp1">
+                                Resting Blood Pressure (94 - 200 mmHg)</label></td>
+                            <td class="input_slider">
+                                <form class="slider_input">
+                                    <input class="hd-slider-width" id="nRestbp1" max="200" min="94" name="amountRange"
+                                           oninput="this.form.amountInput.value=this.value"
+                                           step="all" type="range" value="94"/>
+                                    <input class="hd-number-width" id="nRestbp2" max="200" min="94" name="amountInput"
+                                           oninput="this.form.amountRange.value=this.value"
+                                           step="all" type="number" value="94"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="before_slider" for="nThalach1">
+                                Thalium Stress Test Maximum Heart Rate (71 - 202)</label></td>
+                            <td class="input_slider">
+                                <form class="slider_input">
+                                    <input class="hd-slider-width" id="nThalach1" max="202" min="71" name="amountRange"
+                                           oninput="this.form.amountInput.value=this.value"
+                                           step="all" type="range" value="71"/>
+                                    <input class="hd-number-width" id="nThalach2" max="202" min="71" name="amountInput"
+                                           oninput="this.form.amountRange.value=this.value"
+                                           step="all" type="number" value="71"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="before_slider" for="nCa1">
+                                Number of Major Vessels Colored by Fluoroscopy (0 - 3)</label></td>
+                            <td class="input_slider">
+                                <form class="slider_input">
+                                    <input class="hd-slider-width" id="nCa1" max="3" min="0" name="amountRange"
+                                           oninput="this.form.amountInput.value=this.value"
+                                           step="all" type="range" value="0"/>
+                                    <input class="hd-number-width" id="nCa2" max="3" min="0" name="amountInput"
+                                           oninput="this.form.amountRange.value=this.value"
+                                           step="all" type="number" value="0"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="before_slider" for="nCp1">
+                                Chest Pain Type (1=typical angina, 2=atypical angina, 3=non-angina, 4=asymptomatic
+                                angina)</label></td>
+                            <td class="input_slider">
+                                <form class="slider_input">
+                                    <input class="hd-slider-width" id="nCp1" max="4" min="1" name="amountRange"
+                                           oninput="this.form.amountInput.value=this.value"
+                                           step="1" type="range" value="1"/>
+                                    <input class="hd-number-width" id="nCp2" max="4" min="1" name="amountInput"
+                                           oninput="this.form.amountRange.value=this.value"
+                                           step="1" type="number" value="1"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="before_slider" for="nSlope1">
+                                Peak Exercise ST Segment (0=flat or downsloping, 1=upsloping)</label></td>
+                            <td class="input_slider">
+                                <form class="slider_input">
+                                    <input class="hd-slider-width" id="nSlope1" max="1" min="0" name="amountRange"
+                                           oninput="this.form.amountInput.value=this.value"
+                                           step="1" type="range" value="0"/>
+                                    <input class="hd-number-width" id="nSlope2" max="1" min="0" name="amountInput"
+                                           oninput="this.form.amountRange.value=this.value"
+                                           step="1" type="number" value="0"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="before_slider" for="nThal1">
+                                Thalium Test: (0=normal or fixed defect, 1=reversible defect)</label></td>
+                            <td class="input_slider">
+                                <form class="slider_input">
+                                    <input class="hd-slider-width" id="nThal1" max="1" min="0" name="amountRange"
+                                           oninput="this.form.amountInput.value=this.value"
+                                           step="1" type="range" value="0"/>
+                                    <input class="hd-number-width" id="nThal2" max="1" min="0" name="amountInput"
+                                           oninput="this.form.amountRange.value=this.value"
+                                           step="1" type="number" value="0"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="input_slider">
+                                <input class="btn btn-primary" onclick="updateOne(val01,-1)" type="button"
+                                       value="Reset All Sliders"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="child2">
+                    <script>
+                        const width = 100;
+                        const height = 400;
+
+                        const holder = d3.select(".child2")
+                            .append("svg")
+                            .attr("width", width)
+                            .attr("height", height);
+
+                        // draw a rectangle
+                        const y0 = 20;
+                        const height0 = 380;
+                        holder.append("rect")
+                            .attr("x", 5)
+                            .attr("y", y0 + height0)
+                            .style("fill", "rgb(0,255,0)")
+                            .attr("height", 0)
+                            .attr("width", 90);
+
+                        // draw a container rectangle
+                        holder.append("rect")
+                            .attr("x", 5)
+                            .attr("y", y0)
+                            .style("fill", "none")
+                            .style("stroke", "lightblue")
+                            .style("stroke-width", 4)
+                            .attr("height", height0)
+                            .attr("width", 90);
+
+                        // add text inside rectangle
+                        holder.append("text")
+                            .text("0.00%")
+                            .attr("x", 12)
+                            .attr("y", y0 + height0 - 10)
+                            .attr("fill", "black")
+                            .attr("font-family", "Verdana")
+                            .attr("font-size", "20");
+
+                        // initialize
+                        let val01 = document.getElementById("nSex1").value;
+                        let val02 = document.getElementById("nRestbp1").value;
+                        let val03 = document.getElementById("nThalach1").value;
+                        let val04 = document.getElementById("nCa1").value;
+                        let val05 = document.getElementById("nCp1").value;
+                        let val06 = document.getElementById("nSlope1").value;
+                        let val07 = document.getElementById("nThal1").value;
+                        updateOne(val01, 0);
+
+                        // Check for changes in the inputs and update output bar
+                        d3.select("#nSex1").on("input", function () {
+                            updateOne(+this.value, 1);
+                        });
+                        d3.select("#nSex2").on("input", function () {
+                            updateOne(+this.value, 1);
+                        });
+                        d3.select("#nRestbp1").on("input", function () {
+                            updateOne(+this.value, 2);
+                        });
+                        d3.select("#nRestbp2").on("input", function () {
+                            updateOne(+this.value, 2);
+                        });
+                        d3.select("#nThalach1").on("input", function () {
+                            updateOne(+this.value, 3);
+                        });
+                        d3.select("#nThalach2").on("input", function () {
+                            updateOne(+this.value, 3);
+                        });
+                        d3.select("#nCa1").on("input", function () {
+                            updateOne(+this.value, 4);
+                        });
+                        d3.select("#nCa2").on("input", function () {
+                            updateOne(+this.value, 4);
+                        });
+                        d3.select("#nCp1").on("input", function () {
+                            updateOne(+this.value, 5);
+                        });
+                        d3.select("#nCp2").on("input", function () {
+                            updateOne(+this.value, 5);
+                        });
+                        d3.select("#nSlope1").on("input", function () {
+                            updateOne(+this.value, 6);
+                        });
+                        d3.select("#nSlope2").on("input", function () {
+                            updateOne(+this.value, 6);
+                        });
+                        d3.select("#nThal1").on("input", function () {
+                            updateOne(+this.value, 7);
+                        });
+                        d3.select("#nThal2").on("input", function () {
+                            updateOne(+this.value, 7);
+                        });
+
+                        // Update the heart disease probability
+                        function updateOne(value, index) {
+
+                            if (index === 1) {
+                                val01 = value;
+                            } else if (index === 2) {
+                                val02 = value;
+                            } else if (index === 3) {
+                                val03 = value;
+                            } else if (index === 4) {
+                                val04 = value;
+                            } else if (index === 5) {
+                                val05 = value;
+                            } else if (index === 6) {
+                                val06 = value;
+                            } else if (index === 7) {
+                                val07 = value;
+                            } else if (index === -1) {
+                                // Set everything back to default state:
+                                val01 = document.getElementById("nSex1").defaultValue;
+                                document.getElementById("nSex1").value = val01;
+                                document.getElementById("nSex2").value = val01;
+                                val02 = document.getElementById("nRestbp1").defaultValue;
+                                document.getElementById("nRestbp1").value = val02;
+                                document.getElementById("nRestbp2").value = val02;
+                                val03 = document.getElementById("nThalach1").defaultValue;
+                                document.getElementById("nThalach1").value = val03;
+                                document.getElementById("nThalach2").value = val03;
+                                val04 = document.getElementById("nCa1").defaultValue;
+                                document.getElementById("nCa1").value = val04;
+                                document.getElementById("nCa2").value = val04;
+                                val05 = document.getElementById("nCp1").defaultValue;
+                                document.getElementById("nCp1").value = val05;
+                                document.getElementById("nCp2").value = val05;
+                                val06 = document.getElementById("nSlope1").defaultValue;
+                                document.getElementById("nSlope1").value = val06;
+                                document.getElementById("nSlope2").value = val06;
+                                val07 = document.getElementById("nThal1").defaultValue;
+                                document.getElementById("nThal1").value = val07;
+                                document.getElementById("nThal2").value = val07;
+                            }
+
+                            // Standardize the continuous features:
+                            let srbp_val = (val02 - 131.7157) / 17.7478;
+                            let sthalach_val = (val03 - 149.3278) / 23.1211;
+                            let sca_val = (val04 - 0.6722) / 3.0;
+
+                            // Disentangle the categorical features:
+                            let cp_contr = 0.0;
+                            if (val05 === 1) {
+                                cp_contr = -2.2318;
+                            } else if (val05 === 2) {
+                                cp_contr = -1.2681;
+                            } else if (val05 === 3) {
+                                cp_contr = -2.1124;
+                            }
+                            let slope_contr = 0.0;
+                            if (val06 === 1) {
+                                slope_contr = -1.4726;
+                            }
+                            let thal_contr = 0.0;
+                            if (val07 === 1) {
+                                thal_contr = 1.5009;
+                            }
+
+                            // Compute log-odds, then probability:
+                            let scprod = 1.4361 * val01 + 0.4415 * srbp_val - 0.4431 * sthalach_val + 3.7984 * sca_val + cp_contr + slope_contr + thal_contr;
+                            let drec = 1.0 / (1.0 + Math.exp(-scprod));
+                            let drecs = height0 * drec;
+                            drec *= 100;
+
+                            // Update plot:
+                            let rcolor = percentToRGB(drec);
+                            holder.select("rect")
+                                .attr("y", y0 + height0 - drecs)
+                                .attr("height", drecs)
+                                .style("fill", rcolor);
+
+                            holder.select("text")
+                                .text(function () {
+                                    return parseFloat(Math.round(drec * 100) / 100).toFixed(2) + "%";
+                                });
+
+                        }
+
+                        function percentToRGB(percent) {
+                            if (percent === 100) {
+                                percent = 99
+                            }
+                            let r, g, b;
+
+                            if (percent < 50) {
+                                // green to yellow
+                                r = Math.floor(255 * (percent / 50));
+                                g = 255;
+
+                            } else {
+                                // yellow to red
+                                r = 255;
+                                g = Math.floor(255 * ((50 - percent % 50) / 50));
+                            }
+                            b = 0;
+
+                            return "rgb(" + r + "," + g + "," + b + ")";
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</section>
+<!-- END section -->
+
+<section class="probootstrap-section probootstrap-bg-light" data-section="analysis" id="analysis" style="background-color: #6c22ff80;">
+    <div class="container">
+        <div class="row text-center mb100">
+            <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+                <img src = "img/aa.png" style = "width:300px;">
+                <p style="color:white;">Model's accuracy is 87.3 +- 1.4%. The following are the results of analysis done on the available
+                    heart disease dataset. Each graph shows the result based on different attributes.</p>
+                <p style = "color:white">Green box indicates No Disease. Red box indicates Disease.</p>
+                <img alt="Flow of Analysis" class="img-responsive probootstrap-shadow" src="img/flow.jpg">
+            </div>
+        </div>
+        <!-- END row -->
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Age" class="img-responsive probootstrap-shadow" src="img/plots/age.jpg">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Excercise Induced Angina" class="img-responsive probootstrap-shadow"
+                         src="img/plots/angina.jpg">
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Type of Chest Pain" class="img-responsive probootstrap-shadow"
+                         src="img/plots/chestpain.jpg">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="ST Depression Induced by Excercise" class="img-responsive probootstrap-shadow"
+                         src="img/plots/depression.jpg">
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Fasting Blood Sugar" class="img-responsive probootstrap-shadow"
+                         src="img/plots/fastingsugar.jpg">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Major Vessels Colored by Fluoroscopy" class="img-responsive probootstrap-shadow"
+                         src="img/plots/fluoroscopy.jpg">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Slope of Peak Excercise ST Segment" class="img-responsive probootstrap-shadow"
+                         src="img/plots/peak.jpg">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Rest ECG" class="img-responsive probootstrap-shadow" src="img/plots/restecg.jpg">
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Resting Blood Pressure" class="img-responsive probootstrap-shadow"
+                         src="img/plots/restingbp.jpg">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Serum Cholestrol" class="img-responsive probootstrap-shadow"
+                         src="img/plots/serumchol.jpg">
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Sex" class="img-responsive probootstrap-shadow" src="img/plots/sex.jpg">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Thalium Stress Test Result" class="img-responsive probootstrap-shadow"
+                         src="img/plots/thaliumstress.jpg">
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="probootstrap-testimonial">
+                    <img alt="Thalium Test Max. Stress Rate" class="img-responsive probootstrap-shadow"
+                         src="img/plots/thaliumtest.jpg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="probootstrap-footer" style="background-color: #58457f;">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="probootstrap-link" href="#home">Back to top</span></a> <br>
+                &copy; 2023. All Rights Reserved. <br> Designed &amp; Developed by <a
+                    href="https://github.com/Sreenidh26" target="_blank">Sreenidh Bonagiri
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/scripts.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
